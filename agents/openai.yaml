@@ -1,0 +1,7 @@
+interface:
+  display_name: "BULIDICS API"
+  short_description: "Review and implement BULIDICS API integrations"
+  default_prompt: "Use $bulidics-api to review this integration against the current BULIDICS specification."
+
+policy:
+  allow_implicit_invocation: true
