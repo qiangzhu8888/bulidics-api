@@ -1,0 +1,7 @@
+interface:
+  display_name: "BULIDICS Water Leak Monitor"
+  short_description: "Evaluate BULIDICS water-leak sensor status safely"
+  default_prompt: "Use $bulidics-water-leak-monitor to evaluate this leak-sensor status and identify any data-loss or communication risk."
+
+policy:
+  allow_implicit_invocation: true
