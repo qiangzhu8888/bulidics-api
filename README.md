@@ -1,6 +1,6 @@
 # BULIDICS Agent Skills
 
-Portable skills for implementing and operating BULIDICS integrations in Codex, Cursor, Claude Code, and other Agent Skills-compatible tools.
+Portable skills for implementing and operating BULIDICS integrations in Codex, Cursor, and other Agent Skills-compatible tools.
 
 ## Included skills
 
@@ -19,34 +19,22 @@ skills/
 └── bulidics-water-leak-monitor/
 ```
 
-## Quick install on Windows
+## Install for Codex
 
-Download or clone this repository, then double-click `install.cmd`. The installer:
-
-- installs both skills for Codex and Cursor under `~/.agents/skills/`;
-- installs both skills for Claude Code under `~/.claude/skills/`;
-- backs up an existing skill before replacing it;
-- records the installed version without storing any credentials.
-
-Run `verify.cmd` to check the installation and `uninstall.cmd` to remove only the BULIDICS skills installed by this kit. Japanese instructions are in `README_インストール.txt`.
-
-## Manual installation
-
-For Codex and Cursor, copy the skill folders to:
+Copy the desired skill folders into `~/.codex/skills/` so that each `SKILL.md` is located directly under its skill directory:
 
 ```text
-~/.agents/skills/bulidics-api/SKILL.md
-~/.agents/skills/bulidics-water-leak-monitor/SKILL.md
+~/.codex/skills/bulidics-api/SKILL.md
+~/.codex/skills/bulidics-water-leak-monitor/SKILL.md
 ```
 
-For Claude Code, copy the same folders to:
+Invoke them as `$bulidics-api` and `$bulidics-water-leak-monitor`. Automatic selection is also enabled for relevant requests.
 
-```text
-~/.claude/skills/bulidics-api/SKILL.md
-~/.claude/skills/bulidics-water-leak-monitor/SKILL.md
-```
+## Install for Cursor
 
-In Codex, invoke them as `$bulidics-api` and `$bulidics-water-leak-monitor`. In Cursor and Claude Code, invoke them as `/bulidics-api` and `/bulidics-water-leak-monitor`. Automatic selection is also available for relevant requests.
+Place the desired skill folders under `~/.cursor/skills/` for global use or `.cursor/skills/` for one project. Cursor also discovers skills in Codex-compatible `~/.codex/skills/` locations.
+
+Invoke them from Agent chat as `/bulidics-api` and `/bulidics-water-leak-monitor`.
 
 ## Validation
 
