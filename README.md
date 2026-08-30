@@ -23,9 +23,12 @@ skills/
 
 Download or clone this repository, then double-click `install.cmd`. The installer:
 
+- shows the Codex, Cursor, and Claude Code installation destinations before copying;
+- displays four installation stages, the current skill, and percentage progress;
 - installs both skills for Codex and Cursor under `~/.agents/skills/`;
 - installs both skills for Claude Code under `~/.claude/skills/`;
 - backs up an existing skill before replacing it;
+- saves a timestamped installation log;
 - records the installed version without storing any credentials.
 
 Run `verify.cmd` to check the installation and `uninstall.cmd` to remove only the BULIDICS skills installed by this kit. Japanese instructions are in `README_インストール.txt`.
