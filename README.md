@@ -6,6 +6,7 @@ Portable skills for implementing and operating BULIDICS integrations and Agentic
 
 | Skill | Purpose |
 |---|---|
+| `agentic-iot-architect` | Design, diagnose, and transform IoT systems using Agentic IoT concepts, including ZiFiSense ZETA Server API & MQTT integrations. |
 | `bulidics-api` | Implement and review BULIDICS HTTP push v1.0 and RESTful API v1.0.2 integrations. |
 | `bulidics-water-leak-monitor` | Evaluate water-leak sensor state, transition history, duplicate delivery, communication freshness, and polling data-loss risk. |
 | `agentic-iot-architect` | Design, diagnose, and transform IoT systems from monitoring/visualization into context-aware decision and action flows using the Agentic IoT framework. |
@@ -16,6 +17,7 @@ Each folder under `skills/` is an independent skill with its own `SKILL.md`, ref
 
 ```text
 skills/
+├── agentic-iot-architect/
 ├── bulidics-api/
 ├── bulidics-water-leak-monitor/
 └── agentic-iot-architect/

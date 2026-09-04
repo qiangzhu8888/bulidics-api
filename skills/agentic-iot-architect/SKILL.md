@@ -58,6 +58,17 @@ When recommending Level 2-4, explicitly identify safety, authority, rollback, au
 - When BUILDICS, ZETA, BLE, LoRaWAN, Wi-Fi, APIs, gateways, BIM, weather data, or other systems are supplied, position them according to their actual role rather than forcing them into the architecture.
 - Do not invent product capabilities, deployment results, customer deployments, costs, performance, or integrations not supported by user-provided sources.
 
+## Platform Integration & Specifications
+
+### ZiFiSense ZETA Network Management Platform (ZETA Server)
+
+When designing or implementing an Agentic IoT architecture that uses **ZETA** (ZiFiSense ZETA Server / Gateways / Relays / Terminals):
+
+- **Perception (Sensing & Telemetry)**: ZETA terminals and base stations push telemetry data via MQTT or HTTP REST endpoints. Refer to [references/zeta-api/sensor-codecs.md](references/zeta-api/sensor-codecs.md) for payload codecs (e.g., ZAIoT-TD01 temperature sensor).
+- **Actuation & Downlink Control**: Command execution to terminals, relays, or base stations (unicast, multicast, broadcast, task schedules, firmware updates) is supported via HTTP REST API or MQTT. Refer to:
+  - [references/zeta-api/http-api.md](references/zeta-api/http-api.md): HTTP RESTful API specification (Auth token HMAC-SHA1, terminal/relay/ap query and control).
+  - [references/zeta-api/mqtt-api.md](references/zeta-api/mqtt-api.md): MQTT topic specification (`api_key/version/opType/uid/msgType`) and telemetry/alarm push flows.
+- **Helper Script**: Use `scripts/zeta_helper.py` to generate HMAC-SHA1 signatures, validate MQTT topic structures, or check response envelopes.
 ## Output Modes
 
 Choose the smallest useful mode based on the user's request.
